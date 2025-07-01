@@ -1,133 +1,150 @@
-/* Reset básico de estilos */
+/* Resetando alguns estilos padrões do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definindo o layout e fontes principais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/* Barra de Navegação */
 header {
-    background: #005f50;
-    color: white;
+    background-color: #005f50; /* Cor verde escuro */
     padding: 1em 0;
-    text-align: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
-    color: white;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Introdução */
+#home {
+    background-color: #ffcc00; /* Cor amarela */
+    text-align: center;
+    padding: 4em 0;
+}
+
+#home h1 {
+    font-size: 3em;
+    color: #005f50;
+}
+
+#home p {
     font-size: 1.2em;
+    color: #333;
 }
 
-section {
-    padding: 2em 0;
+/* Caixa para a seção Sobre o Projeto */
+#sobre {
+    background-color: #fff;
+    border: 2px solid #005f50;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 2em;
+#sobre h2 {
+    color: #005f50;
+    font-size: 2.2em;
     margin-bottom: 1em;
 }
 
-.galeria {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-}
-
-.galeria img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-form input, form textarea {
-    padding: 0.8em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 1em;
-}
-
-form button {
-    background-color: #005f50;
-    color: white;
-    padding: 0.8em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#sobre p {
     font-size: 1.2em;
+    color: #333;
 }
 
-form button:hover {
-    background-color: #004740;
+/* Seções de Galeria e Contato */
+section {
+    padding: 4em 0;
 }
 
-footer {
-    background: #333;
-    color: white;
+h2 {
+    font-size: 2.5em;
+    color: #005f50;
     text-align: center;
-    padding: 1em 0;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #005f50;
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
 }
 
 footer p {
     font-size: 1em;
 }
 
-/* Responsividade */
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-    header h1 {
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #home h1 {
+        font-size: 2.5em;
+    }
+
+    #home p {
+        font-size: 1.1em;
+    }
+
+    #sobre h2 {
+        font-size: 1.8em;
+    }
+
+    h2 {
         font-size: 2em;
     }
-
-    .galeria {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .galeria img {
-        width: 90%;
-    }
 }
-
-@media (max-width: 480px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    form button {
-        font-size: 1em;
-    }
 }

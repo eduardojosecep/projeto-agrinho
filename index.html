@@ -7,19 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Barra de Navegação -->
     <header>
-        <div class="container">
-            <h1>Festejando a Conexão Campo Cidade</h1>
-            <nav>
+        <nav>
+            <div class="container">
+                <a href="#home" class="logo">Campo & Cidade</a>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#sobre">Sobre o Projeto</a></li>
                     <li><a href="#galeria">Galeria</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
+    <!-- Seção de Introdução -->
+    <section id="home">
+        <div class="container">
+            <h1>Festejando a Conexão Campo e Cidade</h1>
+            <p>Explore a união entre o mundo rural e urbano, celebrando suas culturas e histórias!</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre o Projeto -->
     <section id="sobre">
         <div class="container">
             <h2>Sobre o Projeto</h2>
@@ -27,34 +37,24 @@
         </div>
     </section>
 
+    <!-- Seção Galeria -->
     <section id="galeria">
         <div class="container">
-            <h2>Galeria de Imagens</h2>
-            <div class="galeria">
-                <img src="campo.jpg" alt="Paisagem do Campo">
-                <img src="cidade.jpg" alt="Paisagem da Cidade">
-            </div>
+            <h2>Galeria</h2>
+            <p>Uma coleção de imagens e vídeos que ilustram as interações e festas entre o campo e a cidade.</p>
+            <!-- Coloque suas imagens e vídeos aqui -->
         </div>
     </section>
 
+    <!-- Seção Contato -->
     <section id="contato">
         <div class="container">
             <h2>Contato</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
+            <p>Entre em contato para saber mais sobre o projeto ou para colaborar com nossas iniciativas.</p>
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
